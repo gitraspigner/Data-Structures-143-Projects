@@ -1,20 +1,28 @@
-//Ravi Spigner
-//10/22/17
-//CSE143
-//TA: Alina Liokumovich
-//Homework 4
-//HangmanManager is capable of retrieving, displaying, and manipulating information in a 
-//game of EVIL EVIL Hangman. HangmanManager can initialize the state of a game, return 
-//the current collection of potential word answers, the number of guesses the user has left, the
-//collection of letters the user has guessed, the letter pattern that the potential word answers
-// follow, and can decide the next collection of words (and word pattern) to use for answers, 
-//based on the guesses the user makes. 
+/**
+ * Filename:
+ *
+ * @author: Ravi Spigner
+ * @version: 2.1
+ * @since: 2021-28-11
+ *
+ * This CLass/File Description:
+ * HangmanManager is capable of retrieving, displaying, and manipulating information in a
+ * game of EVIL, EVIL Hangman. HangmanManager can initialize the state of a game, return
+ * the current collection of potential word answers, the number of guesses the user has left, the
+ * collection of letters the user has guessed, the letter pattern that the potential word answers
+ *  follow, and can decide the next collection of words (and word pattern) to use for answers,
+ * based on the guesses the user makes.
+ *
+ */
+
 import java.util.*;
 public class HangmanManager {
    private int guessesRemain;
    private TreeSet<Character> guessedLetters;
    private Set<String> possibleWords;
    private String patternOutline;
+
+
    //pre:  'dictionary' parameter is a text file containing a set of words
    //      'length' parameter is the length of the word the user wishes to guess, throws
    //         IllegalArgumentException if length is less than 1
